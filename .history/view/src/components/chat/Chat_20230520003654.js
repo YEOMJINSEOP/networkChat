@@ -47,7 +47,7 @@ const Chat = () => {
 
     
     const webSocketLogin = useCallback(() => {
-        ws.current = new WebSocket("ws://ec2-13-125-213-254.ap-northeast-2.compute.amazonaws.com:8080");
+        ws.current = new WebSocket("ec2-13-125-213-254.ap-northeast-2.compute.amazonaws.com:8080");
 
         ws.current.onmessage = (message) => {
             const dataSet = JSON.parse(message.data);
